@@ -1,15 +1,12 @@
-var swiper = new Swiper(".hero .hero__swiper", {
-  slidesPerView: "auto",
+var swiper = new Swiper(".hero .container .hero__swiper", {
   spaceBetween: 20,
-  centeredSlides: true,
-  effect: "fade",
   autoplay: {
     delay: 2500,
     disableOnInteraction: false,
   },
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".hero .container .hero__swiper .swiper-button-next",
+    prevEl: ".hero .container .hero__swiper .swiper-button-prev",
   },
 });
 const swiperArray = [
