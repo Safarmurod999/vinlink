@@ -1,0 +1,135 @@
+.hero {
+  padding-top: 30px;
+  &__top {
+    @include flex(stretch, space-between, row, 25px);
+    @media screen and (max-width: 768px) {
+      .button {
+        display: none;
+      }
+    }
+    &--form {
+      @include flex(stretch, space-between, row, 10px);
+      flex-grow: 1;
+      padding: 6px 16px;
+      border-radius: 15px;
+      border: 1px solid #000000;
+      @media screen and (max-width: 768px) {
+        border-radius: 10px;
+      }
+      input[type="text"] {
+        width: 100%;
+        border: none;
+        outline: none;
+        font-size: 20px;
+        @media screen and (max-width: 768px) {
+          font-size: 15px;
+        }
+        &::placeholder {
+          color: #000000;
+        }
+      }
+
+      #check {
+        @include flex(center, center, row, 16px);
+        @media screen and (max-width: 768px) {
+          gap: 7px;
+        }
+        label {
+          cursor: pointer;
+        }
+      }
+      input[type="checkbox"] {
+        width: 20px;
+        height: 20px;
+        font-size: 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        @media screen and (max-width: 768px) {
+          font-size: 15px;
+          width: 14px;
+          height: 14px;
+        }
+      }
+      .slash {
+        width: 1px;
+        height: 100%;
+        background-color: #000000;
+      }
+      button {
+        @media screen and (max-width: 768px) {
+          svg {
+            width: 16px;
+          }
+        }
+      }
+    }
+  }
+  &__swiper {
+    margin: 75px 0 55px;
+    height: 442px;
+    &-content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding: 15px 120px;
+      z-index: 2;
+      border-radius: 10px;
+      background-color: rgba(0, 0, 0, 0.7);
+      * {
+        color: var(--white);
+      }
+    }
+  }
+  .swiper {
+    &-slide {
+      position: relative;
+      img {
+        width: 100%;
+        position: relative;
+        z-index: -1;
+      }
+      h2 {
+        max-width: 750px;
+        font-size: 47px;
+        line-height: 66.7px;
+      }
+      p {
+        margin-top: 45px;
+        font-size: 32px;
+        line-height: 38.7px;
+      }
+      a {
+        margin-top: 35px;
+        width: 245px;
+        height: 60px;
+        font-size: 18px;
+        line-height: 22px;
+      }
+    }
+    &-button {
+      &-next,
+      &-prev {
+        width: 55px;
+        height: 55px;
+        top: auto;
+        bottom: 55px !important;
+        border-radius: 50%;
+        background-color: var(--lightgray) !important;
+        &::after {
+          font-size: 20px;
+          font-weight: 800;
+          color: #262626 !important;
+        }
+      }
+      &-prev {
+        left: auto;
+        right: 155px !important;
+      }
+      &-next {
+        right: 70px !important;
+      }
+    }
+  }
+}

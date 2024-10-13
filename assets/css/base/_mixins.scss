@@ -1,0 +1,20 @@
+
+@mixin flex($a: center, $j: center, $f: row, $g: 0px) {
+    display: flex;
+    flex-direction: $f;
+    align-items: $a;
+    justify-content: $j;
+    gap: $g;
+  }
+  
+  @mixin center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  @mixin before {
+    position: absolute;
+    content: "";
+  }
