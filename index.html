@@ -32,7 +32,7 @@
     <!-- Header  -->
     <nav class="nav">
       <div class="nav__top">
-        <div class="container flex items-center justify-between">
+        <div class="container">
           <p>Москва, ул. Нижегородская, 25</p>
           <a href="tel:+7 (969) 000 7 555">
             <svg
@@ -130,7 +130,7 @@
       </div>
     </nav>
 
-    <section class="hero">
+    <section class="hero" id="hero">
       <div class="container">
         <div class="hero__top">
           <a href="#" class="button">КАТАЛОГ</a>
@@ -161,12 +161,173 @@
           </form>
           <a href="#" class="button">Корзина</a>
         </div>
-
+      </div>
+      <div class="container">
         <div class="swiper hero__swiper">
           <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="./assets/images/home/swiper.png" alt="slide" />
+              <div class="hero__swiper-content">
+                <h2>ОРИГИНАЛЬНЫЕ ЗАПЧАСТИ КОМПЛЕКТЫ ДЛЯ ТО МОТОРНЫЕ МАСЛА</h2>
+                <p>в наличии и под заказ</p>
+                <a href="#" class="btn button">Подробнее о нас</a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/images/home/swiper.png" alt="slide" />
+              <div class="hero__swiper-content">
+                <h2>ОРИГИНАЛЬНЫЕ ЗАПЧАСТИ КОМПЛЕКТЫ ДЛЯ ТО МОТОРНЫЕ МАСЛА</h2>
+                <p>в наличии и под заказ</p>
+                <a href="#" class="btn button">Подробнее о нас</a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/images/home/swiper.png" alt="slide" />
+              <div class="hero__swiper-content">
+                <h2>ОРИГИНАЛЬНЫЕ ЗАПЧАСТИ КОМПЛЕКТЫ ДЛЯ ТО МОТОРНЫЕ МАСЛА</h2>
+                <p>в наличии и под заказ</p>
+                <a href="#" class="btn button">Подробнее о нас</a>
+              </div>
+            </div>
           </div>
           <div class="swiper-button-next"></div>
           <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="brands" id="brands">
+      <div class="container">
+        <div class="title">Поиск запчастей по марке</div>
+        <div class="filter">
+          <div class="filter__btns brands__filter">
+            <button class="brands__filter--item active" data-value="passenger">
+              Легковые
+            </button>
+            <button class="brands__filter--item" data-value="truck">
+              Грузовые
+            </button>
+            <button class="brands__filter--item" data-value="commercial">
+              Коммерческие
+            </button>
+            <button class="brands__filter--item" data-value="motorcycle">
+              Мототехника
+            </button>
+          </div>
+        </div>
+        <div class="brands__list">
+          <div class="brands__list--item" data-name="commercial">
+            <img src="./assets/images/brands/brand-1.svg" alt="brand logo" />
+            <p>Lexus</p>
+          </div>
+          <div class="brands__list--item" data-name="commercial">
+            <img src="./assets/images/brands/brand-2.svg" alt="brand logo" />
+            <p>Jaguar</p>
+          </div>
+          <div class="brands__list--item" data-name="commercial">
+            <img src="./assets/images/brands/brand-3.svg" alt="brand logo" />
+            <p>Dodge</p>
+          </div>
+          <div class="brands__list--item" data-name="commercial">
+            <img src="./assets/images/brands/brand-4.svg" alt="brand logo" />
+            <p>Opel</p>
+          </div>
+          <div class="brands__list--item" data-name="commercial">
+            <img src="./assets/images/brands/brand-5.svg" alt="brand logo" />
+            <p>Toyota</p>
+          </div>
+          <div class="brands__list--item" data-name="truck">
+            <img src="./assets/images/brands/brand-6.svg" alt="brand logo" />
+            <p>Ford</p>
+          </div>
+          <div class="brands__list--item" data-name="commercial">
+            <img src="./assets/images/brands/brand-7.svg" alt="brand logo" />
+            <p>Jeep</p>
+          </div>
+          <div class="brands__list--item" data-name="commercial">
+            <img src="./assets/images/brands/brand-8.svg" alt="brand logo" />
+            <p>KIA</p>
+          </div>
+          <div class="brands__list--item" data-name="commercial">
+            <img src="./assets/images/brands/brand-9.svg" alt="brand logo" />
+            <p>Inifinity</p>
+          </div>
+          <div class="brands__list--item" data-name="commercial">
+            <img src="./assets/images/brands/brand-10.svg" alt="brand logo" />
+            <p>Hyundai</p>
+          </div>
+          <div class="brands__list--item" data-name="commercial">
+            <img src="./assets/images/brands/brand-11.svg" alt="brand logo" />
+            <p>Skoda</p>
+          </div>
+          <div class="brands__list--item" data-name="commercial">
+            <img src="./assets/images/brands/brand-12.svg" alt="brand logo" />
+            <p>Peugeot</p>
+          </div>
+          <div class="brands__list--item" data-name="commercial">
+            <img src="./assets/images/brands/brand-13.svg" alt="brand logo" />
+            <p>Mazda</p>
+          </div>
+          <div class="brands__list--item" data-name="commercial">
+            <img src="./assets/images/brands/brand-14.svg" alt="brand logo" />
+            <p>Land Rover</p>
+          </div>
+          <div class="brands__list--item" data-name="commercial">
+            <img src="./assets/images/brands/brand-15.svg" alt="brand logo" />
+            <p>Citroen</p>
+          </div>
+          <div class="brands__list--item" data-name="motorcycle">
+            <img src="./assets/images/brands/brand-16.svg" alt="brand logo" />
+            <p>Honda</p>
+          </div>
+          <div class="brands__list--item" data-name="commercial">
+            <img src="./assets/images/brands/brand-17.svg" alt="brand logo" />
+            <p>Seat</p>
+          </div>
+          <div class="brands__list--item" data-name="commercial">
+            <img src="./assets/images/brands/brand-18.svg" alt="brand logo" />
+            <p>Audi</p>
+          </div>
+          <div class="brands__list--item" data-name="commercial">
+            <img src="./assets/images/brands/brand-19.svg" alt="brand logo" />
+            <p>Renault</p>
+          </div>
+          <div class="brands__list--item" data-name="commercial">
+            <img src="./assets/images/brands/brand-20.svg" alt="brand logo" />
+            <p>BMW</p>
+          </div>
+          <div class="brands__list--item" data-name="commercial">
+            <img src="./assets/images/brands/brand-21.svg" alt="brand logo" />
+            <p>Cadillac</p>
+          </div>
+          <div class="brands__list--item" data-name="commercial">
+            <img src="./assets/images/brands/brand-22.svg" alt="brand logo" />
+            <p>Mercedes</p>
+          </div>
+          <div class="brands__list--item" data-name="commercial">
+            <img src="./assets/images/brands/brand-23.svg" alt="brand logo" />
+            <p>Nissan</p>
+          </div>
+          <div class="brands__list--item" data-name="truck">
+            <img src="./assets/images/brands/brand-24.svg" alt="brand logo" />
+            <p>Volvo</p>
+          </div>
+          <div class="brands__list--item" data-name="commercial">
+            <img src="./assets/images/brands/brand-25.svg" alt="brand logo" />
+            <p>Porsche</p>
+          </div>
+          <div class="brands__list--item" data-name="commercial">
+            <img src="./assets/images/brands/brand-26.svg" alt="brand logo" />
+            <p>Chrysler</p>
+          </div>
+          <div class="brands__list--item" data-name="truck">
+            <img src="./assets/images/brands/brand-27.svg" alt="brand logo" />
+            <p>Volkswagen</p>
+          </div>
+          <div class="brands__list--item" data-name="motorcycle">
+            <img src="./assets/images/brands/brand-28.svg" alt="brand logo" />
+            <p>Mitsubishi</p>
+          </div>
         </div>
       </div>
     </section>
@@ -175,4 +336,5 @@
 
   <script type="text/javascript" src="./assets/js/navbar.js"></script>
   <script type="text/javascript" src="./assets/js/swiper.js"></script>
+  <script type="text/javascript" src="./assets/js/filter.js"></script>
 </html>

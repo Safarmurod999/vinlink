@@ -1,5 +1,6 @@
 .hero {
   padding-top: 30px;
+  overflow: hidden;
   &__top {
     @include flex(stretch, space-between, row, 25px);
     @media screen and (max-width: 768px) {
@@ -67,6 +68,10 @@
   &__swiper {
     margin: 75px 0 55px;
     height: 442px;
+    @media screen and (max-width: 768px) {
+      height: 200px;
+      margin-top: 25px;
+    }
     &-content {
       position: absolute;
       top: 0;
@@ -77,35 +82,81 @@
       z-index: 2;
       border-radius: 10px;
       background-color: rgba(0, 0, 0, 0.7);
+      @media screen and (max-width: 1024px) {
+        padding: 15px 50px;
+      }
+      @media screen and (max-width: 768px) {
+        padding: 6px 15px 25px 28px;
+      }
       * {
         color: var(--white);
       }
     }
   }
   .swiper {
+    @media screen and (max-width: 768px) {
+      overflow: visible !important;
+    }
     &-slide {
       position: relative;
+      @media screen and (max-width: 768px) {
+        width: 410px;
+        border-radius: 10px;
+      }
       img {
         width: 100%;
+        height: 100%;
         position: relative;
+        border-radius: 10px;
         z-index: -1;
       }
       h2 {
         max-width: 750px;
         font-size: 47px;
         line-height: 66.7px;
+        @media screen and (max-width: 1024px) {
+          font-size: 40px;
+          line-height: 55.5px;
+        }
+        @media screen and (max-width: 768px) {
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 25.5px;
+        }
       }
       p {
         margin-top: 45px;
         font-size: 32px;
         line-height: 38.7px;
+        @media screen and (max-width: 1024px) {
+          font-size: 25px;
+          line-height: 30.5px;
+        }
+        @media screen and (max-width: 768px) {
+          margin-top: 20px;
+          font-size: 13px;
+          font-weight: 400;
+          line-height: 16px;
+        }
       }
       a {
         margin-top: 35px;
         width: 245px;
-        height: 60px;
+        height: 70px;
         font-size: 18px;
         line-height: 22px;
+        @media screen and (max-width: 1024px) {
+          margin-top: 60px;
+        }
+        @media screen and (max-width: 768px) {
+          margin-top: 18px;
+          width: 115px;
+          height: 24px;
+          font-size: 8px;
+          font-weight: 400;
+          line-height: 9.6px;
+          border-radius: 5px;
+        }
       }
     }
     &-button {
@@ -122,6 +173,9 @@
           font-weight: 800;
           color: #262626 !important;
         }
+        @media screen and (max-width: 768px) {
+          display: none;
+        }
       }
       &-prev {
         left: auto;
@@ -129,6 +183,61 @@
       }
       &-next {
         right: 70px !important;
+      }
+    }
+  }
+}
+.brands {
+  .container {
+    overflow-x: visible;
+  }
+  &__filter {
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  &__list {
+    width: 100%;
+    margin-top: 35px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 25px;
+    @media screen and (max-width: 1280px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    @media screen and (max-width: 992px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media screen and (max-width: 768px) {
+      grid-gap: 17px;
+    }
+    @media screen and (max-width: 460px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    &--item {
+      @include flex(center, space-between, row, 5px);
+      padding: 16px 30px;
+      background-color: var(--lightgray);
+      border-radius: 5px;
+      img {
+        max-height: 100%;
+      }
+      p {
+        font-size: 15px;
+        line-height: 18.5px;
+        font-weight: 500;
+        @media screen and (max-width: 768px) {
+          font-size: 12px;
+          line-height: 14.5px;
+        }
+      }
+      @media screen and (max-width: 768px) {
+        padding: 14px;
+        height: 56px;
+      }
+      @media screen and (max-width: 768px) {
+        padding: 10px;
+        height: 46px;
       }
     }
   }

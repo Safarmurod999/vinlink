@@ -83,6 +83,13 @@ iframe {
   margin-top: 7px;
   background-color: var(--lightgray);
 }
+.nav__top .container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
 @media screen and (max-width: 576px) {
   .nav__top {
     padding: 12px 0;
@@ -140,6 +147,7 @@ iframe {
   justify-content: space-between;
   gap: 50px;
   transition: var(--transition);
+  background-color: var(--white);
 }
 @media screen and (max-width: 1280px) {
   .nav__menu--list {
@@ -148,16 +156,17 @@ iframe {
 }
 @media screen and (max-width: 1024px) {
   .nav__menu--list {
-    position: absolute;
-    top: 90px;
+    position: fixed;
+    top: 190px;
     left: -100%;
     wwidth: 300px;
     height: 100vh;
     padding: 30px;
-    background-color: var(--white);
+    background-color: #fff;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    z-index: 999;
   }
 }
 @media screen and (max-width: 576px) {
@@ -232,6 +241,73 @@ iframe {
   background-color: #fa0404;
 }
 
+.title {
+  font-size: 36px;
+  line-height: 43px;
+}
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 25px;
+    line-height: 30.5px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .title {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+.filter {
+  position: relative;
+  margin: 45px 0 35px;
+  overflow-x: visible;
+}
+.filter__btns {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 32px;
+  overflow-x: auto;
+}
+@media screen and (max-width: 768px) {
+  .filter__btns {
+    gap: 10px;
+  }
+}
+.filter__btns button {
+  padding-inline: 10px;
+  width: 180px;
+  height: 45px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: var(--text-color);
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: var(--lightgray);
+  transition: var(--transition);
+}
+.filter__btns button.active {
+  background-color: var(--primary);
+  color: var(--white);
+}
+.filter__btns button:hover {
+  background-color: #fa0404;
+  color: var(--white);
+}
+@media screen and (max-width: 768px) {
+  .filter__btns button {
+    min-width: 125px;
+    max-width: 125px;
+    height: 25px;
+    font-size: 12px;
+    line-height: 14.5px;
+    border-radius: 3px;
+  }
+}
+
 .container {
   position: relative;
   max-width: 1410px;
@@ -273,6 +349,7 @@ iframe {
 
 .hero {
   padding-top: 30px;
+  overflow: hidden;
 }
 .hero__top {
   display: flex;
@@ -362,6 +439,12 @@ iframe {
   margin: 75px 0 55px;
   height: 442px;
 }
+@media screen and (max-width: 768px) {
+  .hero__swiper {
+    height: 200px;
+    margin-top: 25px;
+  }
+}
 .hero__swiper-content {
   position: absolute;
   top: 0;
@@ -373,15 +456,38 @@ iframe {
   border-radius: 10px;
   background-color: rgba(0, 0, 0, 0.7);
 }
+@media screen and (max-width: 1024px) {
+  .hero__swiper-content {
+    padding: 15px 50px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .hero__swiper-content {
+    padding: 6px 15px 25px 28px;
+  }
+}
 .hero__swiper-content * {
   color: var(--white);
+}
+@media screen and (max-width: 768px) {
+  .hero .swiper {
+    overflow: visible !important;
+  }
 }
 .hero .swiper-slide {
   position: relative;
 }
+@media screen and (max-width: 768px) {
+  .hero .swiper-slide {
+    width: 410px;
+    border-radius: 10px;
+  }
+}
 .hero .swiper-slide img {
   width: 100%;
+  height: 100%;
   position: relative;
+  border-radius: 10px;
   z-index: -1;
 }
 .hero .swiper-slide h2 {
@@ -389,17 +495,60 @@ iframe {
   font-size: 47px;
   line-height: 66.7px;
 }
+@media screen and (max-width: 1024px) {
+  .hero .swiper-slide h2 {
+    font-size: 40px;
+    line-height: 55.5px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .hero .swiper-slide h2 {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25.5px;
+  }
+}
 .hero .swiper-slide p {
   margin-top: 45px;
   font-size: 32px;
   line-height: 38.7px;
 }
+@media screen and (max-width: 1024px) {
+  .hero .swiper-slide p {
+    font-size: 25px;
+    line-height: 30.5px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .hero .swiper-slide p {
+    margin-top: 20px;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+  }
+}
 .hero .swiper-slide a {
   margin-top: 35px;
   width: 245px;
-  height: 60px;
+  height: 70px;
   font-size: 18px;
   line-height: 22px;
+}
+@media screen and (max-width: 1024px) {
+  .hero .swiper-slide a {
+    margin-top: 60px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .hero .swiper-slide a {
+    margin-top: 18px;
+    width: 115px;
+    height: 24px;
+    font-size: 8px;
+    font-weight: 400;
+    line-height: 9.6px;
+    border-radius: 5px;
+  }
 }
 .hero .swiper-button-next, .hero .swiper-button-prev {
   width: 55px;
@@ -414,10 +563,85 @@ iframe {
   font-weight: 800;
   color: #262626 !important;
 }
+@media screen and (max-width: 768px) {
+  .hero .swiper-button-next, .hero .swiper-button-prev {
+    display: none;
+  }
+}
 .hero .swiper-button-prev {
   left: auto;
   right: 155px !important;
 }
 .hero .swiper-button-next {
   right: 70px !important;
+}
+
+.brands .container {
+  overflow-x: visible;
+}
+.brands__filter::-webkit-scrollbar {
+  display: none;
+}
+.brands__list {
+  width: 100%;
+  margin-top: 35px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 25px;
+}
+@media screen and (max-width: 1280px) {
+  .brands__list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media screen and (max-width: 992px) {
+  .brands__list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 768px) {
+  .brands__list {
+    grid-gap: 17px;
+  }
+}
+@media screen and (max-width: 460px) {
+  .brands__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.brands__list--item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+  padding: 16px 30px;
+  background-color: var(--lightgray);
+  border-radius: 5px;
+}
+.brands__list--item img {
+  max-height: 100%;
+}
+.brands__list--item p {
+  font-size: 15px;
+  line-height: 18.5px;
+  font-weight: 500;
+}
+@media screen and (max-width: 768px) {
+  .brands__list--item p {
+    font-size: 12px;
+    line-height: 14.5px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .brands__list--item {
+    padding: 14px;
+    height: 56px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .brands__list--item {
+    padding: 10px;
+    height: 46px;
+  }
 }

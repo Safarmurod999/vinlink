@@ -1,0 +1,41 @@
+.filter {
+  position: relative;
+  margin: 45px 0 35px;
+  overflow-x: visible;
+  &__btns {
+    @include flex(center, flex-start, row, 32px);
+    overflow-x: auto;
+    @media screen and (max-width: 768px) {
+      gap: 10px;
+    }
+    button {
+      padding-inline: 10px;
+      width: 180px;
+      height: 45px;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 17px;
+      color: var(--text-color);
+      border-radius: 5px;
+      cursor: pointer;
+      background-color: var(--lightgray);
+      transition: var(--transition);
+      &.active {
+        background-color: var(--primary);
+        color: var(--white);
+      }
+      &:hover {
+        background-color: #fa0404;
+        color: var(--white);
+      }
+      @media screen and (max-width: 768px) {
+        min-width: 125px;
+        max-width: 125px;
+        height: 25px;
+        font-size: 12px;
+        line-height: 14.5px;
+        border-radius: 3px;
+      }
+    }
+  }
+}
