@@ -3,13 +3,13 @@
   margin: 45px 0 35px;
   overflow-x: visible;
   &__btns {
+    width: 100%;
     @include flex(center, flex-start, row, 32px);
     overflow-x: auto;
     @media screen and (max-width: 768px) {
       gap: 10px;
     }
     button {
-      padding-inline: 10px;
       width: 180px;
       height: 45px;
       font-weight: 600;
@@ -30,7 +30,7 @@
       }
       @media screen and (max-width: 768px) {
         min-width: 125px;
-        max-width: 125px;
+        // max-width: 125px;
         height: 25px;
         font-size: 12px;
         line-height: 14.5px;
