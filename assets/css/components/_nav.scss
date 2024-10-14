@@ -25,6 +25,10 @@
         font-size: 11px;
         line-height: 13.3px;
       }
+      @media screen and (max-width: 480px) {
+        font-size: 8px;
+        line-height: 12.5px;
+      }
     }
     a {
       @include flex(center, center);
@@ -41,6 +45,13 @@
         flex-direction: row-reverse;
         svg {
           width: 22px;
+        }
+      }
+      @media screen and (max-width: 480px) {
+        font-size: 8px;
+        line-height: 12.5px;
+        svg {
+          width: 17px;
         }
       }
     }

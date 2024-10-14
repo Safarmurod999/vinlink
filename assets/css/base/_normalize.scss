@@ -12,6 +12,16 @@ body {
   color: var(--text-color);
 }
 
+main {
+  padding-top: 130px;
+  @media screen and (max-width: 1024px) {
+    padding-top: 100px;
+  }
+  @media screen and (max-width: 576px) {
+    padding-top: 70px;
+  }
+}
+
 ::-webkit-scrollbar {
   width: 10px;
   background-color: #f2f4fb;

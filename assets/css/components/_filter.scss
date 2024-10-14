@@ -2,6 +2,9 @@
   position: relative;
   margin: 45px 0 35px;
   overflow: visible;
+  @media screen and (max-width: 768px) {
+    margin:21px 0 35px;
+  }
   &__btns {
     width: 100%;
     @include flex(center, flex-start, row, 32px);

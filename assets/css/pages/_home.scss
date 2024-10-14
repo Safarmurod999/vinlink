@@ -250,7 +250,7 @@
 .categories {
   padding: 55px 0;
   overflow: visible;
-  .container{
+  .container {
     overflow: visible;
   }
   @media screen and (max-width: 768px) {
@@ -279,10 +279,10 @@
       grid-template-columns: repeat(2, 1fr);
     }
     @media screen and (max-width: 768px) {
-      grid-gap: 20px 38px;
-    }
-    @media screen and (max-width: 480px) {
       grid-gap: 15px 20px;
+    }
+    @media screen and (max-width: 470px) {
+      grid-gap: 10px 10px;
     }
     &--item {
       @include flex(flex-start, space-between, column);
@@ -295,6 +295,10 @@
         height: 247px;
         border-radius: 10px;
         border-width: 1px;
+      }
+      @media screen and (max-width: 470px) {
+        height: auto;
+        min-height: 250px;
       }
       .line {
         width: 100%;
