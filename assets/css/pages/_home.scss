@@ -650,3 +650,385 @@
     }
   }
 }
+
+.selection {
+  padding: 55px 0;
+  @media screen and (max-width: 768px) {
+    padding: 30px 0;
+  }
+  &__title {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 48px;
+    margin-bottom: 45px;
+    text-align: center;
+    @media screen and (max-width: 768px) {
+      font-size: 20px;
+      line-height: 24px;
+      margin-bottom: 25px;
+    }
+  }
+  &__wrapper {
+    width: 100%;
+    @include flex(stretch, space-between, row);
+    ul {
+      width: 50%;
+      padding-left: 25px;
+      border-left: 1px solid #000000;
+      &:first-child {
+        border-left: none;
+        padding-left: 0;
+      }
+      li {
+        max-width: 620px;
+        font-size: 28px;
+        font-weight: 300;
+        line-height: 34px;
+        margin-bottom: 30px;
+        @media screen and (max-width: 768px) {
+          font-size: 14px;
+          line-height: 17px;
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+  .linear-btn {
+    @include flex(center, center);
+    margin-top: 70px;
+    margin-inline: auto;
+    width: 360px;
+    height: 80px;
+    border-radius: 60px;
+    background-image: var(--green);
+    font-size: 20px;
+    color: var(--white);
+    cursor: pointer;
+    background-size: 500px;
+    @media screen and (max-width: 768px) {
+      margin-top: 35px;
+      width: 200px;
+      height: 50px;
+      font-size: 12px;
+      border-radius: 30px;
+    }
+  }
+}
+
+.news {
+  padding: 55px 0;
+  @media screen and (max-width: 768px) {
+    padding: 30px 0;
+  }
+  &__title {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 48px;
+    margin-bottom: 18px;
+    @media screen and (max-width: 768px) {
+      font-size: 20px;
+      line-height: 24px;
+      margin-bottom: 5px;
+      text-align: center;
+    }
+  }
+  &__text {
+    max-width: 490px;
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 34px;
+    margin-bottom: 18px;
+    @media screen and (max-width: 768px) {
+      font-size: 20px;
+      line-height: 24px;
+      margin-bottom: 5px;
+      margin-inline: auto;
+      text-align: center;
+    }
+  }
+  &__wrapper {
+    width: 100%;
+    @include flex(stretch, space-between, row, 35px);
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      gap: 50px;
+    }
+  }
+  &__div {
+    width: 50%;
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
+  }
+  &__list {
+    &--item {
+      @include flex(center, flex-start, row, 32px);
+      padding: 56px 0 24px;
+      border-bottom: 1px solid #000;
+      &:first-child {
+        padding-top: 0;
+      }
+      @media screen and (max-width:576px) {
+        padding: 21px 0;
+      }
+      span {
+        padding: 18px 35px;
+        border-radius: 5px;
+        background-color: #d9d9d9;
+        @media screen and (max-width:576px) {
+          padding: 11px 13px;
+        }
+      }
+      p {
+        font-size: 15px;
+        line-height: 18px;
+        @media screen and (max-width:576px) {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  .linear-btn {
+    @include flex(center, center);
+    margin-top: 70px;
+    margin-inline: auto;
+    width: 360px;
+    height: 80px;
+    border-radius: 60px;
+    background-image: var(--red);
+    font-size: 20px;
+    color: var(--white);
+    cursor: pointer;
+    background-size: 500px;
+    @media screen and (max-width: 768px) {
+      margin-top: 35px;
+      width: 200px;
+      height: 50px;
+      font-size: 12px;
+      border-radius: 30px;
+    }
+  }
+}
+
+.trends {
+  padding: 55px 0;
+  @media screen and (max-width: 768px) {
+    padding: 30px 0;
+  }
+  &__title {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 48px;
+    margin-bottom: 18px;
+    text-align: center;
+    @media screen and (max-width: 768px) {
+      font-size: 20px;
+      line-height: 24px;
+      margin-bottom: 5px;
+    }
+  }
+  &__text {
+    max-width: 490px;
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 34px;
+    margin-bottom: 45px;
+    margin-inline: auto;
+    text-align: center;
+    @media screen and (max-width: 768px) {
+      font-size: 20px;
+      line-height: 24px;
+      margin-bottom: 5px;
+    }
+  }
+  .linear-btn {
+    @include flex(center, center, row, 30px);
+    margin-inline: auto;
+    width: 360px;
+    height: 80px;
+    border-radius: 60px;
+    background-image: var(--blue);
+    font-size: 20px;
+    color: var(--white);
+    cursor: pointer;
+    background-size: 500px;
+    @media screen and (max-width: 768px) {
+      margin-top: 35px;
+      width: 200px;
+      height: 50px;
+      font-size: 12px;
+      border-radius: 30px;
+      svg {
+        width: 21px;
+      }
+    }
+  }
+}
+
+.welcome {
+  padding: 55px 0;
+  background-color: var(--lightgray);
+  @media screen and (max-width: 768px) {
+    padding: 30px 0;
+  }
+  &__title {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 48px;
+    margin-bottom: 18px;
+
+    @media screen and (max-width: 768px) {
+      font-size: 20px;
+      line-height: 24px;
+      margin-bottom: 5px;
+    }
+  }
+  &__text {
+    max-width: 1050px;
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 30px;
+    margin-bottom: 15px;
+
+    @media screen and (max-width: 768px) {
+      font-size: 18px;
+      line-height: 24px;
+      margin-bottom: 5px;
+    }
+  }
+
+  ul {
+    max-width: 900px;
+    list-style: disc;
+    list-style-position: inside;
+    li {
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__link {
+    padding-bottom: 3px;
+    font-size: 25px;
+    font-weight: 700;
+    color: var(--primary);
+    border-bottom: 2px solid var(--primary);
+    @media screen and (max-width:576px) {
+      font-size: 13px;
+    }
+  }
+}
+
+.promocode {
+  @media screen and (max-width: 768px) {
+    background-image: url("../images/home/porsche-mobile.png");
+  }
+  .container {
+    @include flex(flex-start, space-between, row, 20px);
+  }
+  &__wrapper {
+    padding: 95px 0;
+    background-blend-mode: overlay;
+    background-color: rgba(0, 0, 0, 0.7);
+    background-image: url("../images/home/porsche.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    @media screen and (max-width: 768px) {
+      padding: 35px 0;
+    }
+  }
+  &__title {
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 48px;
+    margin-bottom: 18px;
+    color: var(--white);
+    @media screen and (max-width: 768px) {
+      font-size: 20px;
+      line-height: 24px;
+      margin-bottom: 5px;
+    }
+    @media screen and (max-width: 576px) {
+      font-size: 15px;
+      line-height: 18px;
+    }
+  }
+  p {
+    font-size: 25px;
+    color: var(--white);
+    margin-bottom: 35px;
+    @media screen and (max-width: 768px) {
+      font-size: 12px;
+      line-height: 24px;
+      margin-bottom: 20px;
+    }
+  }
+  .button {
+    width: 235px;
+    height: 55px;
+    @media screen and (max-width: 768px) {
+      width: 105px;
+      height: 25px;
+      font-size: 12px;
+      line-height: 24px;
+      border-radius: 5px;
+    }
+  }
+
+  &__bottom {
+    margin-top: 7px;
+    .container {
+      @include flex(center, space-between, row, 20px);
+    }
+    width: 100%;
+    padding: 30px 0;
+    margin-top: 7px;
+    background-color: #333333;
+    @media screen and (max-width: 576px) {
+      padding: 12px 0;
+      margin-top: 2px;
+    }
+    p {
+      font-weight: 400;
+      font-size: 17px;
+      line-height: 20.5px;
+      margin: 0;
+      @media screen and (max-width: 576px) {
+        font-size: 11px;
+        line-height: 13.3px;
+      }
+      @media screen and (max-width: 480px) {
+        font-size: 8px;
+        line-height: 12.5px;
+      }
+    }
+    a {
+      @include flex(center, center);
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 24.2px;
+      transition: var(--transition);
+      color: var(--white);
+      &:hover {
+        color: #fa0404;
+      }
+      @media screen and (max-width: 576px) {
+        font-size: 12px;
+        line-height: 14.5px;
+        flex-direction: row-reverse;
+        svg {
+          width: 22px;
+        }
+      }
+      @media screen and (max-width: 480px) {
+        font-size: 8px;
+        line-height: 12.5px;
+        svg {
+          width: 17px;
+        }
+      }
+    }
+  }
+}

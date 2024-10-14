@@ -55,6 +55,10 @@ oil__cards.forEach((card) => {
   var s = new Swiper(swiper__card, {
     spaceBetween: 20,
     slidesPerView: 1,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
     loop: true,
     pagination: {
       el: ".oil__list--item .swiper-pagination",
@@ -113,6 +117,10 @@ product__cards.forEach((card) => {
   var s = new Swiper(swiper__card, {
     spaceBetween: 20,
     slidesPerView: 1,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
     loop: true,
     pagination: {
       el: ".products__list--item .swiper-pagination",

@@ -1,10 +1,10 @@
 :root {
   --text-color: #090909;
   --primary: #d02c2c;
-  --green: linear-gradient(90deg, #53CF5C 100%, #595959 100%);
-  --blue: linear-gradient(90deg, #299FD9 100%, #165473 100%);
-  --red: linear-gradient(90deg, #D02C2C 100%, #D02C2C 100%, #982929 100%);
+  --green: linear-gradient(169deg, rgba(83,207,92,1) 68%, rgba(89,89,89,0.9052871148459384) 100%, rgba(83,207,92,1) 100%);
+  --blue: linear-gradient(169deg, #299fd9 32.5%, #165473 100%);
+  --red: linear-gradient(90deg, #d02c2c 9.5%, #d02c2c 73%, #982929 100%);
   --lightgray: #ededed;
-  --white:#fff;
+  --white: #fff;
   --transition: all 0.3s;
 }

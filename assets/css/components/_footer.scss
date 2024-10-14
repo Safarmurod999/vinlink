@@ -1,0 +1,199 @@
+.footer {
+  position: relative;
+  padding: 85px 0 75px;
+  @media screen and (max-width: 576px) {
+    padding: 40px 0 110px;
+  }
+  .container {
+    @include flex(stretch, space-between, row, 60px);
+    @media screen and (max-width: 1280px) {
+      flex-direction: column;
+      gap: 40px;
+    }
+  }
+  .footer__description {
+    display: none;
+    @media screen and (max-width: 576px) {
+      display: block;
+    }
+    p {
+      max-width: 405px;
+      margin-bottom: 10px;
+      font-size: 18px;
+      line-height: 45px;
+      @media screen and (max-width: 576px) {
+        font-size: 12px;
+        line-height: 25px;
+      }
+      &:last-child {
+        font-size: 15px;
+        line-height: 18px;
+        @media screen and (max-width: 576px) {
+          margin-top: 40px;
+          font-size: 12px;
+          line-height: 15px;
+        }
+      }
+    }
+  }
+  &__wrapper {
+    @include flex(stretch, space-between, row, 20px);
+    flex-grow: 1;
+    @media screen and (max-width: 576px) {
+      flex-direction: column;
+      gap: 0;
+    }
+  }
+  &__logo {
+    @include flex(flex-start, space-between, column, 20px);
+    .footer__time {
+      display: none;
+      margin: 0;
+      margin-top: 30px;
+    }
+    @media screen and (max-width: 1280px) {
+      margin: 0 auto;
+      * {
+        text-align: center;
+      }
+    }
+    @media screen and (max-width: 576px) {
+      margin: 0;
+      * {
+        text-align: left;
+      }
+      .footer__time {
+        display: block !important;
+      }
+    }
+    .footer__description {
+      display: block;
+      @media screen and (max-width: 576px) {
+        display: none;
+      }
+    }
+    a {
+      @include flex(center, center);
+      @media screen and (max-width: 1280px) {
+        margin: 0 auto;
+      }
+      @media screen and (max-width: 576px) {
+        margin: 0;
+        img {
+          width: 180px;
+        }
+      }
+    }
+  }
+  &__accordion {
+    @media screen and (max-width: 576px) {
+      margin-bottom: 0;
+      padding: 15px 0;
+
+      border-top: 1px solid #000;
+
+      svg {
+        display: flex;
+      }
+    }
+    &.last {
+      border-bottom: 1px solid #000;
+    }
+    &--title {
+      @include flex(center, space-between, row, 20px);
+
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 24px;
+      transition: var(--transition);
+      svg {
+        display: none;
+      }
+      @media screen and (max-width: 576px) {
+        svg {
+          display: flex;
+        }
+      }
+    }
+    &--list {
+      max-width: 300px;
+      padding-top: 20px;
+      li {
+        margin-bottom: 15px;
+        a {
+          font-size: 15px;
+          line-height: 18px;
+        }
+      }
+    }
+    &--main {
+      transition: 0.35s cubic-bezier(0.83, 0, 0.17, 1);
+      @media screen and (max-width: 576px) {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.35s cubic-bezier(0.83, 0, 0.17, 1);
+      }
+    }
+    &.active {
+      .footer__accordion--title {
+        svg {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+
+  &__title {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    margin-bottom: 20px;
+  }
+  &__time {
+    margin-block: 56px;
+    p {
+      font-size: 15px;
+      line-height: 19px;
+    }
+    @media screen and (max-width: 576px) {
+      display: none;
+    }
+  }
+  &__social {
+    div {
+      @include flex(center, flex-start, row, 20px);
+    }
+    @media screen and (max-width: 576px) {
+      padding: 40px 0 35px;
+      svg {
+        width: 25px;
+        height: 25px;
+      }
+    }
+  }
+  &__bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: none;
+    padding: 16px 0;
+    background-color: var(--primary);
+    .container {
+        width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 15px;
+
+    }
+    @media screen and (max-width: 576px) {
+      display: flex;
+    }
+    a{
+        @include flex(center,center,column,5px);
+        color: var(--white);
+    }
+  }
+}
