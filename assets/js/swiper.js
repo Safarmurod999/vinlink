@@ -29,7 +29,10 @@ var swiper = new Swiper(".hero .container .hero__swiper", {
 var oil__list = new Swiper(".oil__list", {
   spaceBetween: 20,
   breakpoints: {
-    0: { slidesPerView: "auto", loop: true },
+    0: {
+      slidesPerView: "auto",
+      spaceBetween: 35,
+    },
     576: {
       slidesPerView: 2,
       spaceBetween: 35,
@@ -81,11 +84,13 @@ var logos__swiper = new Swiper(".logos .container .logos__swiper", {
   },
 });
 
-
 var products__list = new Swiper(".products__list", {
   spaceBetween: 20,
   breakpoints: {
-    0: { slidesPerView: "auto", loop: true },
+    0: {
+      slidesPerView: "auto",
+      spaceBetween: 35,
+    },
     576: {
       slidesPerView: 2,
       spaceBetween: 35,

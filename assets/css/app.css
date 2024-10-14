@@ -958,6 +958,7 @@ iframe {
 }
 .oil__list .swiper-slide {
   width: auto;
+  overflow: hidden;
 }
 .oil__list--item {
   display: flex;
@@ -966,7 +967,6 @@ iframe {
   justify-content: space-between;
   gap: 0px;
   padding: 20px 20px 35px;
-  width: 100%;
   border-radius: 15px;
   border: 2px solid #000000;
   overflow: hidden;
@@ -980,7 +980,7 @@ iframe {
 }
 @media screen and (max-width: 576px) {
   .oil__list--item {
-    width: 215px;
+    width: 215px !important;
   }
 }
 @media screen and (max-width: 470px) {
@@ -1053,6 +1053,7 @@ iframe {
 }
 .oil__swiper {
   width: 100% !important;
+  overflow: hidden;
   height: 150px;
   margin-bottom: 16px;
 }
@@ -1200,7 +1201,7 @@ iframe {
 }
 @media screen and (max-width: 576px) {
   .products__list--item {
-    width: 215px;
+    width: 215px !important;
   }
 }
 @media screen and (max-width: 470px) {
