@@ -128,3 +128,23 @@ product__cards.forEach((card) => {
     },
   });
 });
+
+var videos__swiper = new Swiper(".videos__swiper", {
+  slidesPerView: 3,
+  spaceBetween:15,
+  loop: true,
+  breakpoints:{
+    0: {
+      slidesPerView: 1,
+    },
+    576: {
+      slidesPerView: 2,
+    },
+    992: {
+      slidesPerView: 3,
+    },
+    1280: {
+      slidesPerView: 4,
+    },
+  }
+});
