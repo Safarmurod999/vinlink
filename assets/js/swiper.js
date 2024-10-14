@@ -6,6 +6,11 @@ var swiper = new Swiper(".hero .container .hero__swiper", {
   },
   breakpoints: {
     0: {
+      slidesPerView: "1",
+      spaceBetween: 10,
+      loop: true,
+    },
+    470: {
       slidesPerView: "auto",
       spaceBetween: 10,
       loop: true,

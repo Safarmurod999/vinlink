@@ -11,36 +11,61 @@
       padding: 12px 0;
       margin-top: 2px;
     }
-    .container {
-      p {
-        font-weight: 400;
-        font-size: 17px;
-        line-height: 20.5px;
-        @media screen and (max-width: 576px) {
-          font-size: 11px;
-          line-height: 13.3px;
-        }
+    &--links {
+      @include flex(center, center, row, 20px);
+      @media screen and (max-width: 576px) {
+        flex-direction: row-reverse;
       }
-      a {
-        @include flex(center, center, row, 21px);
-        font-weight: 400;
-        font-size: 20px;
-        line-height: 24.2px;
-        transition: var(--transition);
-        &:hover {
-          color: #fa0404;
-        }
-        @media screen and (max-width: 576px) {
-          font-size: 12px;
-          line-height: 14.5px;
-          flex-direction: row-reverse;
+    }
+    p {
+      font-weight: 400;
+      font-size: 17px;
+      line-height: 20.5px;
+      @media screen and (max-width: 576px) {
+        font-size: 11px;
+        line-height: 13.3px;
+      }
+    }
+    a {
+      @include flex(center, center);
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 24.2px;
+      transition: var(--transition);
+      &:hover {
+        color: #fa0404;
+      }
+      @media screen and (max-width: 576px) {
+        font-size: 12px;
+        line-height: 14.5px;
+        flex-direction: row-reverse;
+        svg {
+          width: 22px;
         }
       }
     }
   }
+  &__logo {
+    img {
+      width: 100%;
+    }
+    @media screen and (max-width: 576px) {
+      width: 150px;
+    }
+  }
   &__menu {
-    padding: 15px 0;
-    position: relative;
+    padding: 35px 0;
+    position: fixed;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    background-color: var(--white);
+    transition: var(--transition);
+    @media screen and (max-width: 576px) {
+      top: 56px;
+      padding: 15px 0;
+    }
     .container {
       @include flex(center, space-between, row);
       position: static;
@@ -56,7 +81,7 @@
         position: fixed;
         top: 190px;
         left: -100%;
-        wwidth: 300px;
+        width: 100%;
         height: 100vh;
         padding: 30px;
         background-color: #fff;
@@ -66,7 +91,7 @@
         z-index: 999;
       }
       @media screen and (max-width: 576px) {
-        width: 100%;
+        top: 140px;
       }
       li {
         transition: var(--transition);
@@ -76,6 +101,18 @@
       }
       &.show {
         left: 0;
+      }
+    }
+  }
+  &__sticky {
+    top: 0;
+    padding: 15px 0;
+    .nav__menu--list {
+      @media screen and (max-width: 1024px) {
+        top: 92px;
+      }
+      @media screen and (max-width: 576px) {
+        top: 56px;
       }
     }
   }

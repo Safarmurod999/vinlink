@@ -1,11 +1,11 @@
 .filter {
   position: relative;
   margin: 45px 0 35px;
-  overflow-x: visible;
+  overflow: visible;
   &__btns {
     width: 100%;
     @include flex(center, flex-start, row, 32px);
-    overflow-x: auto;
+    overflow: auto;
     @media screen and (max-width: 768px) {
       gap: 10px;
     }
@@ -30,7 +30,7 @@
       }
       @media screen and (max-width: 768px) {
         min-width: 125px;
-        // max-width: 125px;
+        width: 125px;
         height: 25px;
         font-size: 12px;
         line-height: 14.5px;

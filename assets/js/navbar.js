@@ -12,3 +12,8 @@ toggleBtn.addEventListener("click", () => {
     closeBtn.style.display = "none";
   }
 });
+
+let nav = document.querySelector(".nav__menu");
+window.addEventListener("scroll", function () {
+  nav.classList.toggle("nav__sticky", window.scrollY > 0);
+});
