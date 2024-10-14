@@ -1633,6 +1633,20 @@ iframe {
     padding: 30px 0;
   }
 }
+.videos__title {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 48px;
+  margin-bottom: 95px;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .videos__title {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 25px;
+  }
+}
 .videos .swiper {
   overflow: visible;
 }
